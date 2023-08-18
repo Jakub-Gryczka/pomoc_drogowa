@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --family-montserrat: "Montserrat", sans-serif;
+  --font-18px: 1.125rem;
+  --font-20px: 1.25rem;
+  --font-24px: 1.5rem;
+  --font-36px: 2.25rem;
+  --font-50px: 3.125rem;
+  --font-56px: 3.5rem;
+  --font-64px: 4rem;
+
+  --color-primary-yellow: #f7c43a;
+  --color-secondary-yellow: #deb134;
+  --color-black: #181818;
+  --color-black-opacity: rgba(24, 24, 24, 0.85);
+  --color-white: #fff;
+
+  --icon-width: 3rem;
+  --icon-height: 3rem;
+}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: var(--family-montserrat);
+  font-size: var(--font-18px);
+}
+img {
+  max-width: 100%;
+}
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+address {
+    font-style: normal;
+}
+.container {
+  margin: 0 auto;
+  width: min(90%, 1200px);
+}
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: var(--color-primary-yellow);
+  border-radius: .5em;
+}
+/* HEADER AND NAV */
+.primary__header {
+  background-color: var(--color-black-opacity);
+  position: relative;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  position: relative;
+  z-index: 5;
+}
+.logo__img {
+  width: min(45%, 200px);
+}
+.hamburger {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 50%;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-white);
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+.hamburger.is-active::after {
+  transform: translate(0, -10px) rotate(-45deg);
+}
+.hamburger.is-active::before {
+  transform: translate(0, 8px) rotate(45deg);
+}
+.nav {
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 60vh;
+  z-index: 2;
+  background-color: var(--color-black);
+  padding-top: 10rem;
+  transition: 0.4s;
+}
+.nav.is-active {
+  left: 0;
+}
+.nav__item {
+  margin-bottom: 1.5em;
+  
+}
+.nav__link {
+    font-size: clamp(1.3rem, 2vw, var(--font-24px));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-white);
+}
+.nav__btn {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/* HERO */
+.hero {
+    background-image: url('assets/locked_belt_transport.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    padding: 5em 0;
+}
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+.hero__heading {
+  font-size: clamp(2rem, 5vw, var(--font-56px));
+  color: var(--color-white);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading-highlight {
+    font-weight: 700;
+    color: var(--color-primary-yellow);
+}
+.contact-item__text {
+    font-size: var(--font-24px);
+    font-weight: 600;
+}
+.contact__phone-number > .contact-item__text {
+    font-size: clamp(1.7rem, 2.5vw, var(--font-36px));
+    font-weight: 700;
+    color: var(--color-primary-yellow);
+}
+.contact__section {
+  background-color: var(--color-primary-yellow);
+}
+.contact-item {
+  padding: 2em 1em;
+}
+.contact__phone-container {
+  background-color: var(--color-black);
+}
