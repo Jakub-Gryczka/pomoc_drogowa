@@ -9,6 +9,7 @@
   --font-20px: 1.25rem;
   --font-24px: 1.5rem;
   --font-36px: 2.25rem;
+  --font-48px: 3rem;
   --font-50px: 3.125rem;
   --font-56px: 3.5rem;
   --font-64px: 4rem;
@@ -16,8 +17,8 @@
   --color-primary-yellow: #f7c43a;
   --color-secondary-yellow: #deb134;
   --color-black: #181818;
-  --color-black-opacity: rgba(24, 24, 24, 0.80);
-  --color-black-opacity-light: rgba(0, 0, 0, 0.60);
+  --color-black-opacity: rgba(24, 24, 24, 0.8);
+  --color-black-opacity-light: rgba(0, 0, 0, 0.6);
   --color-white: #fff;
 
   --icon-width: 3rem;
@@ -42,6 +43,7 @@ img {
 }
 h1,
 h2,
+h4,
 p {
   margin: 0;
   padding: 0;
@@ -163,7 +165,7 @@ address {
 }
 /* HERO */
 .hero__background {
-  background-image: url('assets/locked_belt_transport.png');
+  background-image: url("assets/locked_belt_transport.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -276,7 +278,7 @@ address {
   font-weight: var(--weight-800);
 }
 .offer__header-text {
-  font-size: clamp(.9rem, 2vw, var(--font-24px));
+  font-size: clamp(0.9rem, 2vw, var(--font-24px));
   color: var(--color-black-opacity);
 }
 
@@ -303,6 +305,53 @@ address {
   font-weight: var(--weight-300);
 }
 
+/* ADVANTAGES */
+.advantages {
+  margin-top: 2em;
+  position: relative;
+}
+.advantages__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.advantages__background {
+  background-image: url("assets/towing_car.jpg");
+  filter: brightness(45%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2em 0;
+}
+.advantages__item__icon {
+  color: var(--color-primary-yellow);
+}
+
+.advantages__item__number {
+  font-size: clamp(2rem, 2vw, var(--font-48px));
+  font-weight: var(--weight-700);
+}
+.advantages__icon {
+  font-size: clamp(3.5rem, 4vw, var(--font-64px));
+}
+.advantages__item__text {
+  color: var(--color-white);
+  margin-left: .7em;
+}
+
+/* SERVICES */
 
 /* ANIMATIONS */
 @keyframes bounce {
