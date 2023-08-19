@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,40 +56,103 @@
       </div>
     </header>
     <section class="hero">
+      <div class="hero__background"></div>
       <div class="container">
-          <div class="hero__container">
-            <h1 class="hero__heading">
-              Zapewniamy Najwyższą jakość
-              <span class="heading-highlight weight-700 color-primary"
-                >usług holowniczych</span
-              >
-            </h1>
+        <div class="hero__container">
+          <h1 class="hero__heading">
+            Zapewniamy Najwyższą jakość
+            <span class="heading-highlight weight-700 color-primary"
+              >usług holowniczych</span
+            >
+          </h1>
+          <div class="hero__icon">
+            <span class="material-symbols-outlined icon__expand">
+              expand_more
+            </span>
+            <p class="hero__icon-text">scroll</p>
           </div>
         </div>
-          <section class="contact__section">
-            <div class="container">
-                <div class="contact-item">
-                  <p class="contact-item__text">Szybki dojazd do klienta!</p>
-                </div>
-              </div>
-              <div class="contact__phone-container">
-                <div class="container">
-                  <div class="contact-item">
-                    <address class="contact__phone-number">
-                      <p class="contact-item__text">(+48) 601 805 464</p>
-                    </address>
-                  </div>
-                </div>
-            </div>
-
-              <div class="container">
-                <div class="contact-item">
-                  <p class="contact-item__text">Usługa dostępna 24/7</p>
-                </div>
-              </div>
-          </section>
+      </div>
+      <section class="contact__section">
+        <div class="container">
+          <div class="contact-item">
+            <span class="material-symbols-outlined contact__icon">
+              schedule
+            </span>
+            <p class="contact-item__text">Szybki dojazd do klienta!</p>
+          </div>
         </div>
+        <div class="contact__phone-container">
+          <div class="container">
+            <div class="contact-item">
+              <address class="contact__phone-number">
+                <p class="contact-item__text">(+48) 601 805 464</p>
+              </address>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="contact-item">
+            <span class="material-symbols-outlined contact__icon"> call </span>
+            <p class="contact-item__text">Usługa dostępna 24/7</p>
+          </div>
+        </div>
+      </section>
     </section>
+
+    <main class="main">
+      <div class="container">
+        <div class="main__header-container">
+          <h2 class="main__header">
+            Co <span class="main__header-highlight">oferujemy</span>
+          </h2>
+          <p class="main__header-text">
+            efektywny transport pojazdów na terenie całej Polski
+          </p>
+        </div>
+        <section class="main__primary">
+          <div class="main__primary-img">
+            <img
+              src="assets/towing_truck_mercedes.jpg"
+              alt="Yellow towing Mercedes-Benz truck"
+            />
+          </div>
+          <div class="main__primary-info">
+            <p class="main__primary-info-text">
+              Oferujemy szybki, przyjemny i niedrogi transport pojazdów na
+              terenie całej Polski. Jesteśmy ubezpieczeni i świadczymy usługi od
+              1980 roku. Jesteśmy do Państwa dyspozycji przez 24 godziny na
+              dobę, 7 dni w tygodniu.
+            </p>
+            <ul class="main__primary-info-list">
+              <li class="primary__info-list-item">
+                <span class="material-symbols-outlined primary__info-list-icon">
+                  done
+                </span>
+                <p class="primary-info-list-text">Ponad 25 lat doświadczenia</p>
+              </li>
+              <li class="primary__info-list-item">
+                <span class="material-symbols-outlined primary__info-list-icon">
+                  done
+                </span>
+                <p class="primary-info-list-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptate
+                </p>
+              </li>
+              <li class="primary__info-list-item">
+                <span class="material-symbols-outlined primary__info-list-icon">
+                  done
+                </span>
+                <p class="primary-info-list-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptate
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
