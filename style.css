@@ -63,6 +63,10 @@ a {
 address {
   font-style: normal;
 }
+iframe {
+  margin-top: 1.5em;
+  width: 100%;
+}
 .container {
   margin: 0 auto;
   width: min(90%, 1200px);
@@ -411,6 +415,9 @@ address {
   color: var(--color-white);
   margin-top: .7em;
 
+}
+#map {
+  height: 200px;
 }
 /* ANIMATIONS */
 @keyframes bounce {
