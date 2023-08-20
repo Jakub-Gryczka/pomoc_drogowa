@@ -20,6 +20,7 @@
   --color-black-opacity: rgba(24, 24, 24, 0.8);
   --color-black-opacity-light: rgba(0, 0, 0, 0.6);
   --color-white: #fff;
+  --about-bg: rgba(24, 24, 24, 0.95);;
 
   --icon-width: 3rem;
   --icon-height: 3rem;
@@ -80,6 +81,15 @@ address {
   font-size: clamp(2.1rem, 3vw, var(--font-64px));
   font-weight: var(--weight-400);
   text-transform: uppercase;
+}
+.text {
+  color: var(--color-black-opacity);
+  font-size: clamp(1.06rem, 2vw, var(--font-18px));
+  line-height: 1.6;
+}
+.text-highlight {
+  font-weight: var(--weight-600);
+  color: var(--color-primary-yellow);
 }
 /* HEADER AND NAV */
 .primary__header {
@@ -193,7 +203,7 @@ address {
   justify-content: center;
 }
 .heading-highlight {
-  font-weight: var(--weight-700);
+  font-weight: var(--weight-800);
   color: var(--color-primary-yellow);
 }
 .hero__icon {
@@ -265,11 +275,8 @@ address {
 .offer__secondary {
   margin-top: 1.5em;
 }
-.offer-info-text {
-  color: var(--color-black-opacity);
-  font-size: clamp(1.25rem, 2vw, var(--font-18px));
-}
-.offer__header-container {
+
+.header-container {
   padding: 1.5em 0 2em 0;
   text-align: center;
 }
@@ -277,15 +284,11 @@ address {
 .offer__header-highlight {
   font-weight: var(--weight-800);
 }
-.offer__header-text {
+.heading-sub-text {
   font-size: clamp(0.9rem, 2vw, var(--font-24px));
   color: var(--color-black-opacity);
 }
 
-.offer-info {
-  font-size: var(--font-18px);
-  line-height: 1.6;
-}
 .info-list-icon {
   font-weight: var(--weight-700);
   color: var(--color-primary-yellow);
@@ -300,7 +303,7 @@ address {
   margin-top: 2em;
 }
 .info-list-text {
-  font-size: clamp(1.2rem, 2vw, var(--font-20px));
+  font-size: clamp(1.1rem, 2vw, var(--font-20px));
   color: var(--color-black-opacity-light);
   font-weight: var(--weight-300);
 }
@@ -348,11 +351,67 @@ address {
 }
 .advantages__item__text {
   color: var(--color-white);
-  margin-left: .7em;
+  margin-left: 0.7em;
 }
 
 /* SERVICES */
+.services {
+  display: flex;
+  flex-direction: column;
+}
+.services__item {
+  margin-bottom: 3em;
+}
+.services__item-heading {
+  font-weight: var(--weight-700);
+  font-size: clamp(1.2rem, 2vw, var(--font-24px));
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.services__header-container {
+  padding: 2em 0 2.4em 0;
+}
+.services__heading-highlight {
+  font-weight: var(--weight-800);
+}
 
+
+/* ABOUT COMPANY */
+.about-company {
+  background-color: var(--about-bg);
+  color: var(--color-white);
+  padding: 2em 0;
+}
+.about-company__heading {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.about-company__text {
+  color: inherit;
+}
+.about-company__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+}
+.reach-us__highlight, .reach-us__form {
+  font-weight: var(--weight-700);
+  color: var(--color-primary-yellow);
+}
+.reach-us__form {
+  text-decoration: underline;
+}
+.reach-us__text {
+  font-size: clamp(1.3rem, 2vw, var(--font-50px));
+  color: var(--color-primary-yellow);
+  text-align: center;
+}
+.reach-us__number {
+  color: var(--color-white);
+  margin-top: .7em;
+
+}
 /* ANIMATIONS */
 @keyframes bounce {
   0% {
