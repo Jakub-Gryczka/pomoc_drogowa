@@ -362,7 +362,7 @@ iframe {
 }
 .advantages__item__text {
   color: var(--color-white);
-  /* margin-left: 0.7em; */
+  margin-left: 0.7em;
 }
 
 /* SERVICES */
