@@ -1,4 +1,5 @@
 window.onload = function () {
+  const logo = document.querySelector('.logo');
   const menu_btn = document.querySelector(".hamburger");
   const nav = document.querySelector(".nav");
   const navItem = document.querySelectorAll(".nav__link");
@@ -11,10 +12,11 @@ window.onload = function () {
     nav.classList.remove("is-active");
   };
 
-  for (let i = 0; i < navItem.length; i++) {
+  for(let i = 0; i < navItem.length; i++) {
     navItem[i].addEventListener("click", function () {
-      toggleAndRemoveIsActive();
+        toggleAndRemoveIsActive();
     });
+
   }
 
   navBtn.addEventListener("click", function () {
@@ -25,6 +27,15 @@ window.onload = function () {
     menu_btn.classList.toggle("is-active");
     nav.classList.toggle("is-active");
   });
+
+  document.addEventListener('scroll', function(){
+    nav.classList.remove('is-active');
+    menu_btn.classList.remove('is-active');
+  });
+
+
+
+
 
   const speed = 175;
   function counter() {
@@ -51,8 +62,28 @@ window.onload = function () {
       counter();
     }
   }
+
+  function navCallback(payload) {
+    if(payload[0].intersectionRatio === 1) {
+      document.addEventListener('click', function handleClickOutsideBox(event) {
+          if(!nav.contains(event.target) && !logo.contains(event.target)) {
+            nav.classList.remove('is-active');
+            menu_btn.classList.remove('is-active');
+          }
+      });
+      
+    }
+  }
+
   const ob = new IntersectionObserver(obCallback, {
     threshold: [0, 0.5, 1],
   });
+
+  const navOb = new IntersectionObserver(navCallback, {
+    threshold: [0, 0.5, 1],
+  })
+
+
   ob.observe(advantages);
+  navOb.observe(nav);
 };

@@ -114,7 +114,7 @@ iframe {
   align-items: center;
   padding: 1em 0;
   position: relative;
-  z-index: 5;
+  z-index: 6;
 }
 .logo__img {
   width: min(45%, 200px);
@@ -162,7 +162,7 @@ iframe {
   left: 100%;
   width: 100%;
   min-height: 60vh;
-  z-index: 2;
+  z-index: 5;
   background-color: var(--color-black);
   padding-top: 10rem;
   transition: 0.4s;
@@ -172,18 +172,48 @@ iframe {
 }
 .nav__item {
   margin-bottom: 1.5em;
+  display: flex;
+  justify-content: center;
 }
 .nav__link {
   font-size: clamp(1.3rem, 2vw, var(--font-24px));
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: var(--color-white);
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary-yellow);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: ease-in .3s
+}
+.nav__link:hover::after {
+  width: 100%;
+}
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.9;
 }
 .nav__btn {
   color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-700);
+}
+
+.nav__btn:hover,
+.nav__btn:focus {
+/* NEED TO ANIMATE THE BUTTON */
+
+  color: var(--color-white);
+  background-color: var(--color-secondary-yellow);
+  transition: ease-in-out all 0.5s;
 }
 /* HERO */
 .hero__background {
@@ -447,7 +477,8 @@ iframe {
 }
 .footer__copy,
 .footer__nav,
-.footer__link {
+.footer__link,
+.footer__attribute {
   color: var(--color-white);
 }
 .footer__company-name {
@@ -456,7 +487,6 @@ iframe {
 .footer__nav-item {
   margin-bottom: 1em;
 }
-
 
 /* ANIMATIONS */
 @keyframes bounce {
