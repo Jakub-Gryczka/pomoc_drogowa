@@ -205,15 +205,14 @@ iframe {
   color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-700);
+  border: var(--color-primary-yellow) 3px solid;
+  transition: ease-in .3s;
 }
 
 .nav__btn:hover,
 .nav__btn:focus {
 /* NEED TO ANIMATE THE BUTTON */
-
-  color: var(--color-white);
-  background-color: var(--color-secondary-yellow);
-  transition: ease-in-out all 0.5s;
+  background-color: transparent;
 }
 /* HERO */
 .hero__background {
@@ -284,7 +283,7 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
   text-align: center;
 }
 .contact__icon {
@@ -444,13 +443,13 @@ iframe {
   text-decoration: underline;
 }
 .reach-us__text {
-  font-size: clamp(1.3rem, 3vw, var(--font-50px));
+  font-size: clamp(1.3rem, 3vw, var(--font-36px));
   color: var(--color-primary-yellow);
   text-transform: uppercase;
   text-align: center;
 }
 .reach-us__number {
-  font-size: clamp(1.7rem, 2vw, var(--font-20px));
+  font-size: clamp(1.7rem, 2vw, var(--font-36px));
   color: var(--color-white);
   margin-top: 1em;
 }
@@ -492,6 +491,9 @@ iframe {
 }
 .footer__copy {
   padding: 2em 1em;
+}
+.footer__copy-text {
+  margin-bottom: .5em;
 }
 
 /* ANIMATIONS */
@@ -571,6 +573,7 @@ iframe {
   .contact__section > .container {
     flex: 1 1 30%;
     display: flex;
+    justify-content: center;
     padding: 1em 1.5em;
   }
   .contact__phone-container {
@@ -600,7 +603,6 @@ iframe {
     flex: 1 1 60%;
   }
   .about-company__text-container {
-    min-height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -613,7 +615,7 @@ iframe {
   .footer__logo {
     margin: 0 auto;
     padding: 1em;
-    max-width: 50%;
+    width: min(50%, 500px);
   }
   .footer__copy {
     padding: 2em 0;
