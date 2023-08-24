@@ -216,7 +216,7 @@ iframe {
 }
 /* HERO */
 .hero__background {
-  background-image: url("assets/locked_belt_transport.png");
+  background-image: url("../assets/locked_belt_transport.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -359,7 +359,7 @@ iframe {
   gap: 1.5em;
 }
 .advantages__background {
-  background-image: url("assets/towing_car.jpg");
+  background-image: url("../assets/towing_car.jpg");
   filter: brightness(45%);
   background-size: cover;
   background-repeat: no-repeat;
