@@ -313,8 +313,8 @@ iframe {
   flex-direction: column;
   gap: 1em;
 }
-.offer__secondary {
-  margin-top: 1.5em;
+.offer__secondary, .offer__teriary {
+  margin-top: 2em;
 }
 
 .header-container {
