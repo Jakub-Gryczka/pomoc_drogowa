@@ -17,7 +17,7 @@ window.onload = function () {
         toggleAndRemoveIsActive();
     });
 
-  }
+  };
 
   navBtn.addEventListener("click", function () {
     toggleAndRemoveIsActive();
@@ -55,15 +55,15 @@ window.onload = function () {
         elem.innerText = value;
       }
     }
-  }
+  };
 
-  function obCallback(payload) {
+  function countOnScroll(payload) {
     if (payload[0].intersectionRatio > 0.5035) {
       counter();
     }
-  }
+  };
 
-  function navCallback(payload) {
+  function hideNav(payload) {
     if(payload[0].intersectionRatio === 1) {
       document.addEventListener('click', function handleClickOutsideBox(event) {
           if(!nav.contains(event.target) && !logo.contains(event.target)) {
@@ -73,15 +73,15 @@ window.onload = function () {
       });
       
     }
-  }
+  };
 
-  const ob = new IntersectionObserver(obCallback, {
+  const ob = new IntersectionObserver(countOnScroll, {
     threshold: [0, 0.5, 1],
   });
 
-  const navOb = new IntersectionObserver(navCallback, {
+  const navOb = new IntersectionObserver(hideNav, {
     threshold: [0, 0.5, 1],
-  })
+  });
 
 
   ob.observe(advantages);

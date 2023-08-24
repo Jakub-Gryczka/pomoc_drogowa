@@ -465,7 +465,7 @@ iframe {
   gap: 1em;
 }
 .footer__logo {
-  margin: 1em 0;
+  padding: 2em 0 2.5em 0;
 }
 .footer__logo-img {
   display: block;
@@ -475,17 +475,23 @@ iframe {
 .footer__nav {
   font-size: clamp(0.95rem, 2vw, var(--font-18px));
 }
-.footer__copy,
+.footer__copy-text,
 .footer__nav,
 .footer__link,
-.footer__attribute {
+.footer__copy-attribute {
   color: var(--color-white);
+}
+.footer__copy-attribute, .footer__copy-text {
+  text-align: center;
 }
 .footer__company-name {
   font-weight: 600;
 }
 .footer__nav-item {
   margin-bottom: 1em;
+}
+.footer__copy {
+  padding: 2em 1em;
 }
 
 /* ANIMATIONS */
@@ -498,5 +504,118 @@ iframe {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 700px) {
+  .offering {
+    flex-direction: row;
+  }
+  .offer__secondary {
+    flex-direction: row-reverse;
+  }
+  .offer__primary-img, 
+  .offer__secondary-img,
+  .offer__teriary-img {
+    flex: 1 1 40%;
+  }
+  .offer-info {
+    flex: 1 1 50%;
+  }
+}
+
+@media(min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    flex: 1 1 30%;
+  }
+  .logo__img {
+    width: auto;
+  }
+  .nav {
+    position: relative;
+    inset: 0;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    min-height: auto;
+  }
+  .nav__list {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2.5em;
+    max-width: 100%;
+  }
+  .nav__item {
+    margin: 0;
+  }
+  #primary__header > .container {
+    display: flex;
+  }
+
+  .contact__section {
+    display: flex;
+  }
+  .contact-item {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+  .contact__section > .container {
+    flex: 1 1 30%;
+    display: flex;
+    padding: 1em 1.5em;
+  }
+  .contact__phone-container {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .advantages__items {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .services__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  #about-company > .container {
+    display: flex;
+    gap: 4em;
+  }
+  .about-company__info-block {
+    flex: 1 1 40%;
+  }
+  .map {
+    flex: 1 1 60%;
+  }
+  .about-company__text-container {
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-container {
+    padding: 2em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__logo {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 50%;
+  }
+  .footer__copy {
+    padding: 2em 0;
   }
 }
