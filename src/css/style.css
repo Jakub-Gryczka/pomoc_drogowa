@@ -608,14 +608,16 @@ iframe {
     justify-content: space-between;
   }
   .footer-container {
-    padding: 2em;
+    padding: 3em;
     flex-direction: row;
     justify-content: space-between;
   }
   .footer__logo {
-    margin: 0 auto;
     padding: 1em;
-    width: min(50%, 500px);
+    width: min(45%, 500px);
+  }
+  .footer__nav {
+    flex: 1;
   }
   .footer__copy {
     padding: 2em 0;

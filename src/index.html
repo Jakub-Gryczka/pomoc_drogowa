@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("consent", "default", {
+        ad_storage: "denied",
+
+        analytics_storage: "denied",
+
+        wait_for_update: 500,
+      });
+
+      gtag("set", "ads_data_redaction", true);
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DHK4DKBP9K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DHK4DKBP9K");
+    </script>
     <meta charset="UTF-8" />
 
     <meta
@@ -47,11 +78,6 @@
       type="image/x-icon"
     />
     <script defer src="script.js"></script>
-    <script
-      type="text/javascript"
-      charset="UTF-8"
-      src="//cdn.cookie-script.com/s/dc5762cce6c510141a6446a5f6f2e1eb.js"
-    ></script>
   </head>
   <body>
     <header id="primary__header">
@@ -442,14 +468,14 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__logo">
-        <img
-          class="footer__logo-img"
-          src="assets/logos/MM_AUTOMAX2-04.png"
-          alt="company logo"
-        />
-      </div>
       <div class="container footer-container text">
+        <div class="footer__logo">
+          <img
+            class="footer__logo-img"
+            src="assets/logos/MM_AUTOMAX2-04.png"
+            alt="company logo"
+          />
+        </div>
         <ul class="footer__nav">
           <li class="footer__nav-item">
             <a href="#primary__header" class="footer__link"> Strona główna </a>
@@ -462,14 +488,6 @@
           </li>
           <li class="footer__nav-item">
             <a href="#about-company" class="footer__link"> Kontakt </a>
-          </li>
-        </ul>
-        <ul class="footer__nav">
-          <li class="footer__nav-item">
-            <a href="#" class="footer__link"> Polityka prywatności </a>
-          </li>
-          <li class="footer__nav-item">
-            <a href="#" class="footer__link"> Polityka cookies </a>
           </li>
         </ul>
         <ul class="footer__nav">
@@ -501,6 +519,7 @@
           <a
             class="footer__link"
             href="https://www.freepik.com/free-photo/car-transporter-breakdown-lorry-during-working-using-locked-belt-transport-other-green-car_3805710.htm#query=road%20assistance&position=1&from_view=search&track=ais"
+            target="_blank"
             >Hero background image by jcomp</a
           >
           on Freepik
