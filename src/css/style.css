@@ -118,6 +118,7 @@ iframe {
 }
 .logo__img {
   width: min(45%, 200px);
+  aspect-ratio: 20 / 9;
 }
 .hamburger {
   position: relative;
@@ -216,7 +217,7 @@ iframe {
 }
 /* HERO */
 .hero__background {
-  background-image: url("../assets/locked_belt_transport.png");
+  background-image: url("https://ik.imagekit.io/cdkwqplf5/pomoc-drogowa-lukow/locked_belt_transport.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -317,6 +318,9 @@ iframe {
 .offer__teriary {
   margin-top: 2em;
 }
+.offer-img {
+  aspect-ratio: 12 / 9;
+}
 
 .header-container {
   padding: 1.5em 0 2em 0;
@@ -360,7 +364,7 @@ iframe {
   gap: 1.5em;
 }
 .advantages__background {
-  background-image: url("../assets/towing_car.jpg");
+  background-image: url("https://ik.imagekit.io/cdkwqplf5/pomoc-drogowa-lukow/towing_car.webp");
   filter: brightness(45%);
   background-size: cover;
   background-repeat: no-repeat;
