@@ -27,6 +27,8 @@ window.onload = function () {
   menu_btn.addEventListener("click", function () {
     menu_btn.classList.toggle("is-active");
     nav.classList.toggle("is-active");
+    const expanded = menu_btn.getAttribute("aria-expanded") === "true" || false;
+    menu_btn.setAttribute("aria-expanded", !expanded);
   });
 
   document.addEventListener("scroll", function () {

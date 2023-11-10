@@ -47,6 +47,7 @@ body {
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 h1,
 h2,
@@ -118,7 +119,6 @@ iframe {
 }
 .logo__img {
   width: min(45%, 200px);
-  aspect-ratio: 20 / 9;
 }
 .hamburger {
   position: relative;
@@ -317,9 +317,6 @@ iframe {
 .offer__secondary,
 .offer__teriary {
   margin-top: 2em;
-}
-.offer-img {
-  aspect-ratio: 12 / 9;
 }
 
 .header-container {
