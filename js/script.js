@@ -55,7 +55,6 @@ window.onload = function () {
       }
     }
   }
-
   function countOnScroll(payload) {
     if (payload[0].intersectionRatio > 0.5035) {
       counter();
@@ -80,7 +79,6 @@ window.onload = function () {
   const navOb = new IntersectionObserver(hideNav, {
     threshold: [0, 0.5, 1],
   });
-
   ob.observe(advantages);
   navOb.observe(nav);
 };
