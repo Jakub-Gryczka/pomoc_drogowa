@@ -265,14 +265,14 @@ iframe {
   animation: bounce 2s infinite linear;
 }
 .contact-item__text {
-  font-size: clamp(1.2rem, 5vw, var(--font-24px));
+  font-size: clamp(1rem, 2vw, var(--font-24px));
   font-weight: var(--weight-700);
 }
 .contact__phone-number {
   padding: 1.5em 0;
 }
 .contact-item__number {
-  font-size: clamp(1.7rem, 2vw, var(--font-36px));
+  font-size: clamp(1.5rem, 2vw, var(--font-36px));
   font-weight: var(--weight-700);
   color: var(--color-primary-yellow);
 }
@@ -280,7 +280,7 @@ iframe {
   background-color: var(--color-primary-yellow);
 }
 .contact-item {
-  padding: 1.7em 1em;
+  padding: 1em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,6 +305,9 @@ iframe {
 }
 .contact__phone-container {
   background-color: var(--color-black);
+}
+.contact__phone-container .contact-item {
+  padding: calc(1em - 15px);
 }
 
 /* MAIN */
@@ -644,9 +647,9 @@ iframe {
     min-height: calc(100% + 200px);
   }
 }
-@media (min-height: 450px) {
+@media (min-height: 440px) {
   .hero__background {
-    min-height: calc(100% + 100px);
+    min-height: calc(100% + 55px);
   }
   .nav__btn {
     margin-bottom: 50px;
