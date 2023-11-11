@@ -632,3 +632,13 @@ iframe {
     padding: 2em 0;
   }
 }
+@media (max-height: 560px) {
+  .hero__background {
+    min-height: 600px;
+  }
+}
+@media (min-height: 450px) and (max-height: 785px) {
+  .nav__btn {
+    margin-bottom: 50px;
+  }
+}
