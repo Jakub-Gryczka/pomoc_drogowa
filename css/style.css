@@ -33,7 +33,34 @@
   --weight-700: 700;
   --weight-800: 800;
   --weight-900: 900;
+
+  --filter-white: invert(100%) sepia(3%) saturate(12%) hue-rotate(346deg)
+    brightness(104%) contrast(104%);
+  --filter-yellow: brightness(0) saturate(100%) invert(87%) sepia(19%)
+    saturate(1696%) hue-rotate(339deg) brightness(99%) contrast(96%);
+  --filter-black: brightness(0) saturate(100%);
 }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300 800;
+  src: url("../assets/fonts/Montserrat.woff2") format("woff2-variations");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  src: url("../assets/fonts/MaterialSymbolsOutlined.woff2") format("woff2");
+  font-display: swap;
+}
+.icon {
+  width: var(--font-36px);
+  height: var(--font-36px);
+  filter: invert(100%) sepia(3%) saturate(12%) hue-rotate(346deg)
+    brightness(104%) contrast(104%);
+  display: inline-block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -86,10 +113,6 @@ iframe {
   background-color: var(--color-primary-yellow);
   border-radius: 0.5em;
 }
-.material-symbols-outlined {
-  font-size: var(--font-36px);
-  display: inline-block;
-}
 .heading {
   font-size: clamp(2.1rem, 3vw, var(--font-64px));
   font-weight: var(--weight-400);
@@ -118,7 +141,7 @@ iframe {
   z-index: 6;
 }
 .logo__img {
-  width: min(45%, 200px);
+  width: min(45%, 12.5rem);
 }
 .hamburger {
   position: relative;
@@ -212,7 +235,6 @@ iframe {
 
 .nav__btn:hover,
 .nav__btn:focus {
-  /* NEED TO ANIMATE THE BUTTON */
   background-color: transparent;
 }
 /* HERO */
@@ -263,6 +285,7 @@ iframe {
 }
 .icon__expand {
   animation: bounce 2s infinite linear;
+  fill: var(--color-primary-yellow);
 }
 .contact-item__text {
   font-size: clamp(1rem, 2vw, var(--font-24px));
@@ -294,7 +317,7 @@ iframe {
 }
 .contact__icon::before {
   position: absolute;
-  top: -25%;
+  top: -20%;
   left: -25%;
   content: "";
   width: 55px;
@@ -336,8 +359,10 @@ iframe {
 }
 
 .info-list-icon {
+  width: var(--font-36px);
   font-weight: var(--weight-700);
-  color: var(--color-primary-yellow);
+  filter: brightness(0) saturate(100%) invert(87%) sepia(19%) saturate(1696%)
+    hue-rotate(339deg) brightness(99%) contrast(96%);
 }
 .offer__list-item {
   display: flex;
@@ -351,6 +376,7 @@ iframe {
 .info-list-text {
   color: var(--color-black-opacity-light);
   font-weight: var(--weight-300);
+  flex: 0 1 80%;
 }
 
 /* ADVANTAGES */
@@ -383,16 +409,15 @@ iframe {
   text-align: center;
   padding: 2em 0;
 }
-.advantages__item__icon {
-  color: var(--color-primary-yellow);
-}
 
 .advantages__item__number {
   font-size: clamp(2rem, 2vw, var(--font-48px));
   font-weight: var(--weight-700);
 }
 .advantages__icon {
-  font-size: clamp(3.5rem, 4vw, var(--font-64px));
+  width: clamp(3.5rem, 4vw, var(--font-64px));
+  height: auto;
+  filter: var(--filter-yellow);
 }
 .advantages__item__text {
   color: var(--color-white);
@@ -413,6 +438,9 @@ iframe {
   display: flex;
   align-items: center;
   gap: 0.7em;
+}
+.services__item-heading .icon {
+  filter: var(--filter-black);
 }
 .services__header-container {
   padding: 2em 0 2.4em 0;
@@ -637,20 +665,22 @@ iframe {
 }
 @media (min-width: 1050px) and (min-height: 200px) {
   .hero__background {
-    min-height: calc(100% + 50px);
+    min-height: calc(100% + 3.125rem);
   }
 }
 @media (max-width: 850px) and (max-height: 600px),
   (max-height: 600px) and (min-width: 900px) {
   .hero__background {
-    min-height: calc(100% + 200px);
+    min-height: calc(100% + 3.125rem);
   }
 }
 @media (min-height: 440px) {
   .hero__background {
-    min-height: calc(100% + 55px);
+    min-height: calc(100% + 3.43rem);
   }
+}
+@media (max-height: 440px) {
   .nav__btn {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
 }
